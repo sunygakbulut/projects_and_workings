@@ -74,6 +74,5 @@ def predict():
     print(output)
     return render_template('index.html', prediction_text='The estimated price of your house is {output:,} ₺.  ------ TRAIN R2: 0.95 & TEST R2: 0.90'.format(output=round((prediction[0]*int(Net_M2_)))))
 
-
-    if __name__ == "__main__":
-        app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)

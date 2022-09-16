@@ -75,4 +75,4 @@ def predict():
     return render_template('index.html', prediction_text='The estimated price of your house is {output:,} ₺.  ------ TRAIN R2: 0.95 & TEST R2: 0.90'.format(output=round((prediction[0]*int(Net_M2_)))))
 
 if __name__ == "__main__":
-    socketio.run(app)
+    app.run(debug=True)
